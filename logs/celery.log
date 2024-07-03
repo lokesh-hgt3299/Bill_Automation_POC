@@ -1,0 +1,82 @@
+[2024-07-03 14:08:23,555: WARNING/MainProcess] d:\Lokesh\PYTHON\Practice\.venv\Lib\site-packages\celery\worker\consumer\consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-07-03 14:08:23,564: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-07-03 14:08:23,565: WARNING/MainProcess] d:\Lokesh\PYTHON\Practice\.venv\Lib\site-packages\celery\worker\consumer\consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-07-03 14:08:23,579: INFO/MainProcess] mingle: searching for neighbors
+[2024-07-03 14:08:24,647: INFO/MainProcess] mingle: all alone
+[2024-07-03 14:08:24,704: INFO/MainProcess] celery@HGTKKD-LAP-092 ready.
+[2024-07-03 14:08:41,452: INFO/MainProcess] Task tasks.process_email[4d4f2a56-78e7-4576-8104-f3f3223d96e9] received
+[2024-07-03 14:08:42,058: INFO/MainProcess] Task tasks.process_email[4d4f2a56-78e7-4576-8104-f3f3223d96e9] succeeded in 0.6100000000005821s: None
+[2024-07-03 14:08:42,063: INFO/MainProcess] Task tasks.process_resource_and_files[f2616d11-7cc4-4faa-980d-e52f2b63c373] received
+[2024-07-03 14:08:42,065: WARNING/MainProcess] Processing..
+[2024-07-03 14:08:42,066: WARNING/MainProcess]  
+[2024-07-03 14:08:42,066: WARNING/MainProcess] Western Paper_0001.pdf
+[2024-07-03 14:08:42,415: INFO/MainProcess] Task tasks.process_resource_and_files[f2616d11-7cc4-4faa-980d-e52f2b63c373] succeeded in 0.34400000001187436s: None
+[2024-07-03 14:08:42,420: INFO/MainProcess] Task tasks.upload_to_s3_and_process[20240702072006-Western_Paper_0001-1.pdf] received
+[2024-07-03 14:08:46,766: INFO/MainProcess] Task tasks.upload_to_s3_and_process[20240702072006-Western_Paper_0001-1.pdf] succeeded in 4.3439999999973224s: None
+[2024-07-03 14:08:46,770: INFO/MainProcess] Task tasks.get_ocr_text[832407d4-49ec-44c8-b59c-54d63a854a29] received
+[2024-07-03 14:08:46,777: WARNING/MainProcess] Convert convert pdf to images
+[2024-07-03 14:08:46,777: WARNING/MainProcess]  
+[2024-07-03 14:08:46,778: WARNING/MainProcess] Unable to get page count. Is poppler installed and in PATH?
+[2024-07-03 14:08:46,822: INFO/MainProcess] Task tasks.get_ocr_text[832407d4-49ec-44c8-b59c-54d63a854a29] succeeded in 0.046999999991385266s: {'file_table_id': '66850e1256c2775a3f8973f6', 'ocr_text': []}
+[2024-07-03 14:08:46,823: INFO/MainProcess] Task tasks.extract_entities[b7287919-eec2-4675-9618-12eb11a4109b] received
+[2024-07-03 14:08:46,824: INFO/MainProcess] Task tasks.extract_entities[b7287919-eec2-4675-9618-12eb11a4109b] succeeded in 0.0s: None
+[2024-07-03 14:08:46,825: INFO/MainProcess] Task tasks.process_entities[606edc78-9030-4219-8bbe-700e5d48e69f] received
+[2024-07-03 14:08:46,841: ERROR/MainProcess] Task tasks.process_entities[606edc78-9030-4219-8bbe-700e5d48e69f] raised unexpected: AttributeError("'NoneType' object has no attribute 'get'")
+Traceback (most recent call last):
+  File "d:\Lokesh\PYTHON\Practice\.venv\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "d:\Lokesh\PYTHON\Practice\.venv\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Lokesh\PYTHON\Practice\project\backend\tasks.py", line 169, in process_entities
+    entities = result.get("entities")
+               ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+[2024-07-03 14:13:09,643: WARNING/MainProcess] d:\Lokesh\PYTHON\Practice\.venv\Lib\site-packages\celery\worker\consumer\consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-07-03 14:13:09,647: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-07-03 14:13:09,649: WARNING/MainProcess] d:\Lokesh\PYTHON\Practice\.venv\Lib\site-packages\celery\worker\consumer\consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-07-03 14:13:09,653: INFO/MainProcess] mingle: searching for neighbors
+[2024-07-03 14:13:10,688: INFO/MainProcess] mingle: all alone
+[2024-07-03 14:13:10,705: INFO/MainProcess] celery@HGTKKD-LAP-092 ready.
+[2024-07-03 14:13:12,731: INFO/MainProcess] Task tasks.process_email[d8aac855-82b2-4eca-8147-8bd832f77de4] received
+[2024-07-03 14:13:13,877: INFO/MainProcess] Task tasks.process_email[d8aac855-82b2-4eca-8147-8bd832f77de4] succeeded in 1.139999999999418s: None
+[2024-07-03 14:13:13,884: INFO/MainProcess] Task tasks.process_resource_and_files[75294f7f-5a3a-428e-be1f-fadd75a171cc] received
+[2024-07-03 14:13:13,888: WARNING/MainProcess] Processing..
+[2024-07-03 14:13:13,888: WARNING/MainProcess]  
+[2024-07-03 14:13:13,889: WARNING/MainProcess] Western Paper_0001.pdf
+[2024-07-03 14:13:14,224: INFO/MainProcess] Task tasks.process_resource_and_files[75294f7f-5a3a-428e-be1f-fadd75a171cc] succeeded in 0.3279999999940628s: None
+[2024-07-03 14:13:14,229: INFO/MainProcess] Task tasks.upload_to_s3_and_process[20240702072006-Western_Paper_0001-1.pdf] received
+[2024-07-03 14:13:18,634: INFO/MainProcess] Task tasks.upload_to_s3_and_process[20240702072006-Western_Paper_0001-1.pdf] succeeded in 4.389999999999418s: None
+[2024-07-03 14:13:18,639: INFO/MainProcess] Task tasks.get_ocr_text[d78b6c82-12a3-4b28-aff6-24996a80d6d3] received
+[2024-07-03 14:13:18,646: WARNING/MainProcess] Convert convert pdf to images
+[2024-07-03 14:13:18,647: WARNING/MainProcess]  
+[2024-07-03 14:13:18,647: WARNING/MainProcess] Unable to get page count. Is poppler installed and in PATH?
+[2024-07-03 14:13:18,690: INFO/MainProcess] Task tasks.get_ocr_text[d78b6c82-12a3-4b28-aff6-24996a80d6d3] succeeded in 0.046999999991385266s: {'file_table_id': '66850f22399ebd0d8b2c126c', 'ocr_text': []}
+[2024-07-03 14:13:18,691: INFO/MainProcess] Task tasks.extract_entities[f580ee27-207a-4d70-a900-869140f06301] received
+[2024-07-03 14:13:18,693: WARNING/MainProcess] OCr--------
+[2024-07-03 14:13:18,693: WARNING/MainProcess]  
+[2024-07-03 14:13:18,694: WARNING/MainProcess] 0
+[2024-07-03 14:13:18,695: INFO/MainProcess] Task tasks.extract_entities[f580ee27-207a-4d70-a900-869140f06301] succeeded in 0.0s: None
+[2024-07-03 14:13:18,696: INFO/MainProcess] Task tasks.process_entities[339e97e4-2a96-4a11-a459-78f504782a11] received
+[2024-07-03 14:13:18,696: INFO/MainProcess] Task tasks.process_entities[339e97e4-2a96-4a11-a459-78f504782a11] succeeded in 0.0s: 'All tasks completed'
