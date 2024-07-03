@@ -1,0 +1,12 @@
+fastapi
+pymongo
+python-dotenv
+celery
+pdfkit
+boto3
+pdf2image
+msal
+numpy
+opencv-python
+img2pdf
+patool
